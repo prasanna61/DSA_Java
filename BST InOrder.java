@@ -27,12 +27,13 @@ public class BstInOrder {
         }
         return root;
     }
-    public void postOrder(Node root) {
+    public void InOrder(Node root) {
         if(root!=null) {
 
             postOrder(root.left);
-            postOrder(root.right);
             System.out.print(root.data+" ");
+            postOrder(root.right);
+            
         }
     }
     public static void main(String[] args) {
@@ -44,6 +45,6 @@ public class BstInOrder {
         b.insert(4);
         b.insert(7);
         b.insert(9);//5,3,2,4,8,7,9
-        b.postOrder(b.root);
+        b.InOrder(b.root);
     }
 }
